@@ -16,10 +16,10 @@ const verifyRateGrowth = (rateMap, testCurrency) => {
             } else {
                 rateGrowth.push(`- ${currentRate}`);
             }
-            prevRate = currentRate;
         } else {
             rateGrowth.push(currentRate);
         }
+        prevRate = currentRate;
     }
     logger.info(`I want to see if rate on my currency is growing compare to 10 days before today: ${rateGrowth}`);
 }
